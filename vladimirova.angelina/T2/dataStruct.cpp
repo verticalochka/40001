@@ -2,6 +2,7 @@
 #include <vector>
 #include <iomanip>
 #include <cmath>
+#include <complex>
 #include "scopeGuard.hpp"
 
 namespace
@@ -45,7 +46,7 @@ namespace
         std::istream::sentry sentry(in);
         if (!sentry) return in;
 
-        in >> DelimiterIO{ '0' } >> dest.value;
+        in >> DelimiterIO{ '0' } >> std::oct >> dest.value;
 
         if (in)
         {
@@ -137,7 +138,7 @@ std::ostream& vladimirova::operator<<(std::ostream& out, const vladimirova::Data
     if (!sentry) return out;
 
     iofmtguard guard(out);
-    out << "(:key1 0" << dest.key1;
+    out << "(:key1 0" << std::oct << dest.key1;
     out << ":key2 #c(" << std::fixed << std::setprecision(1);
     out << dest.key2.real() << " " << dest.key2.imag() << ")";
     out << ":key3 \"" << dest.key3 << "\":)";
