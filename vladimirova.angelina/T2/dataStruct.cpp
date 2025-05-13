@@ -161,3 +161,4 @@ bool vladimirova::DataStruct::operator<(const DataStruct& other) const
         return key3.length() < other.key3.length();
     }
 }
+
