@@ -54,3 +54,5 @@ bool vladimirova::Polygon::operator==(const Polygon& rhs) const
 {
     return points == rhs.points;
 }
+
+

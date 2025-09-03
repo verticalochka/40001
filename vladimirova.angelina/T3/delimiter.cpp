@@ -15,3 +15,4 @@ std::istream& operator>>(std::istream& in, DelimiterIO&& dest)
     }
     return in;
 }
+

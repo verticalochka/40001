@@ -1,4 +1,3 @@
-// commands.cpp
 #include "commands.hpp"
 #include <iterator>
 #include <algorithm>
@@ -52,7 +51,6 @@ namespace
         return polygon.points.size() == count;
     }
 
-    // Функция для преобразования строки в число (замена std::stoull)
     size_t stringToSizeT(const std::string& str)
     {
         std::istringstream iss(str);
@@ -355,3 +353,4 @@ void vladimirova::processMaxSequence(std::istream& in, std::ostream& out, const 
     size_t maxSequence = findMaxConsecutiveSequence(polygons, targetPolygon);
     out << maxSequence << '\n';
 }
+
