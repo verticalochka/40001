@@ -1,18 +1,14 @@
-#include "delimiter.hpp"
+#ifndef DELIMITER_HPP
+#define DELIMITER_HPP
 
-std::istream& operator>>(std::istream& in, DelimiterIO&& dest)
+#include <iostream>
+
+struct DelimiterIO
 {
-    std::istream::sentry sentry(in);
-    if (!sentry)
-    {
-        return in;
-    }
-    char c = '\0';
-    in >> c;
-    if (in && (c != dest.expected))
-    {
-        in.setstate(std::ios::failbit);
-    }
-    return in;
-}
+	char expected;
+};
+
+std::istream& operator>>(std::istream& in, DelimiterIO&& dest);
+
+#endif
 
