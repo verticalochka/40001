@@ -12,4 +12,3 @@ iofmtguard::~iofmtguard()
 	s.precision(precision);
 	s.flags(fmt);
 }
-

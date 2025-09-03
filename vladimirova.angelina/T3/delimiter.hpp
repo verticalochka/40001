@@ -11,4 +11,3 @@ struct DelimiterIO
 std::istream& operator>>(std::istream& in, DelimiterIO&& dest);
 
 #endif
-

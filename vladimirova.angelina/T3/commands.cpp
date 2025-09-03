@@ -316,7 +316,7 @@ void vladimirova::processCount(std::istream& in, std::ostream& out, const std::v
     }
 }
 
-void vladimirova::processEcho(std::istream& in, std::ostream& out, std::vector<Polygon>& polygons)
+void vladimirova::processEcho(std::istream& in, std::ostream& out, std::vector < Polygon& polygons)
 {
     if (polygons.empty())
     {
@@ -353,4 +353,3 @@ void vladimirova::processMaxSequence(std::istream& in, std::ostream& out, const 
     size_t maxSequence = findMaxConsecutiveSequence(polygons, targetPolygon);
     out << maxSequence << '\n';
 }
-
